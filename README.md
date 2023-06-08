@@ -35,6 +35,8 @@ predicted_label = run_predict(model, test_dataloader, device)
 | 原資料+搜尋優化+sijunhe/nezha-base-wwm | 5e-5  | 20  | 0.5353  | 0.4125  | X  |
 | 資料擴充+搜尋優化+sijunhe/nezha-base-wwm | 5e-5  | 30  | 0.5090  | **0.4395**  | 0.3791  |
 | 資料擴充+搜尋優化+sijunhe/nezha-base-wwm | 5e-5  | 30  | 0.5004  | 0.4267 | 0.3811  |
-| 資料擴充+搜尋優化+sijunhe/nezha-base-wwm+ 數據平衡 | 5e-5  | 30  | 0.5266  | 0.4186  | 0.3887  |
+| 資料擴充+搜尋優化+sijunhe/nezha-base-wwm+ 數據平衡 | 6e-5  | 30  | 0.5266  | 0.4186  | **0.3887**  |
 
-
+### 小記
+- 為節省儲存空間，在進行實驗時我們會定期清理一些權重，本組僅留下 private score 最佳之權重檔案
+- 如要更改參數，請記得注意在 `checkpoints` 資料夾內的資料夾是否和 Hyperparameter 有相對應
